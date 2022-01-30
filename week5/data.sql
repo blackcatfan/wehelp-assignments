@@ -39,7 +39,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES (1,'小花','test','test',101,'2022-01-29 19:22:39'),(2,'小黃','aaa','1234',1,'2022-01-29 19:28:23'),(3,'小黑','bbb','2222',55,'2022-01-29 19:29:11'),(4,'小綠','cccc','4444',99,'2022-01-29 19:29:35'),(5,'小白','dddd','4321',124,'2022-01-29 19:30:04');
+INSERT INTO `member` VALUES (1,'小花','test','test',101,'2022-01-30 10:10:26'),(2,'小黃','aaa','1234',1,'2022-01-30 10:10:26'),(3,'小黑','bbb','2222',55,'2022-01-30 10:10:27'),(4,'小綠','ccc','4444',99,'2022-01-30 10:10:27'),(5,'小白','dddd','4321',124,'2022-01-30 10:10:27');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,7 +65,7 @@ CREATE TABLE `message` (
 
 LOCK TABLES `message` WRITE;
 /*!40000 ALTER TABLE `message` DISABLE KEYS */;
-INSERT INTO `message` VALUES (1,1,'你好棒!','2022-01-30 09:05:14'),(2,1,'讚!','2022-01-30 09:05:14'),(3,2,'加油!','2022-01-30 09:05:14'),(4,3,'台灣Number1!','2022-01-30 09:05:15'),(5,4,'fighting!','2022-01-30 09:05:15'),(6,1,'台灣之光!','2022-01-30 09:05:15');
+INSERT INTO `message` VALUES (1,1,'你好棒!','2022-01-30 10:35:09'),(2,1,'讚!','2022-01-30 10:35:09'),(3,2,'加油!','2022-01-30 10:35:09'),(4,3,'台灣Number1!','2022-01-30 10:35:09'),(5,4,'fighting!','2022-01-30 10:35:09'),(6,1,'台灣之光!','2022-01-30 10:35:09');
 /*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -78,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 10:05:15
+-- Dump completed on 2022-01-30 11:03:31

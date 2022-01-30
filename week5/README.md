@@ -3,7 +3,7 @@ password 欄位必須是 test。接著繼續新增至少 4 筆隨意的資料。
 ![image](https://blackcatfan.github.io/wehelp-assignments/week5/Task3-1.jpg)
 
 Task 3-2: 使用 SELECT 指令取得所有在 member 資料表中的會員資料。
-![image](https://blackcatfan.github.io/wehelp-assignments/week5/TASK3-2.jpg)
+![image](https://blackcatfan.github.io/wehelp-assignments/week5/TASK3-4_v2fixed.jpg)
 
 Task 3-3:使用 SELECT 指令取得所有在 member 資料表中的會員資料，並按照 time 欄位，由
 近到遠排序。

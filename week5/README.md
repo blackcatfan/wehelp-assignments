@@ -10,7 +10,7 @@ Task 3-3:使用 SELECT 指令取得所有在 member 資料表中的會員資料�
 ![image](https://blackcatfan.github.io/wehelp-assignments/week5/TASK3-3.jpg)
 
 Task 3-4:使用 SELECT 指令取得 member 資料表中第 2 ~ 4 共三筆資料，並按照 time 欄位，
-由近到遠排序。( 並非編號 2、3、4 的資料，而是排序後的第 2 ~ 4 筆資料 
+由近到遠排序。( 並非編號 2、3、4 的資料，而是排序後的第 2 ~ 4 筆資料. 
 ![image](https://blackcatfan.github.io/wehelp-assignments/week5/TASK3-4.jpg)
 
 Task 3-5:使用 SELECT 指令取得欄位 username 是 test 的會員資料。

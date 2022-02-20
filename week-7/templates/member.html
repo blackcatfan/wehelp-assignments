@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>week 6 assignment</title>
+</head>
+
+<body>
+<div>
+    <h3>歡迎光臨-這是會員頁</h3><br>
+{{name}},恭喜你成功登入系統<br>
+<a href="http://127.0.0.1:3000/signout">登出系統</a>
+</div>
+
+<div>
+    <h3>查詢會員姓名, 請輸入使用者登入代號</h3>
+    <form action="/querymemberdata", method='POST'>
+        <input type="text" name="input_username" required/>
+        <button Class="ButtonCenter" id="btn">查詢</button> 
+    </form>
+    <div><span id="member_name"></span></div>    
+    <div><span id="member_username"></span></div>    
+
+</div>
+<script>
+    var btn=document.getElementById("btn");/*按鍵觸發以下動作*/
+    btn.addEventListener("clicks", function(){
+        var ourRequest= new XMLHttpRequest ();
+        ourRequest.open('GET','http://127.0.0.1:3000/api/members?username=dog')
+        ourRequest.onload=function(){
+            var ourData=Json.parse(ourRequest.responseText);
+            console.log(ourData)
+            renderHTML(ourData);
+        };
+        ourRequest.send();
+    });
+
+    function renderHTML(data){
+    }
+
+    // /*let api_url='https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json'; */   
+    // let api_url='http://127.0.0.1:3000/api/members?username=dog';
+    // async function getapidata(){
+    //     /*api_url_add_inputusername=api_url+inputusername*/
+    // /*    const response= await fetch(api_url);
+    //     const apidata=await response.json();
+    //     console.log (apidata)
+    // }*/
+    // getapidata();
+    
+</script>
+
+</body>
+</html>

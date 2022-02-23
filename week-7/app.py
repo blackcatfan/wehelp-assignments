@@ -150,13 +150,6 @@ def members():
         return render_template("members.html",data=nodata_dump)
 
 
-# @app.route("/querymemberdata") #查詢會員名稱
-# def querymemberdata():#抓到輸入的會員名稱, 帶入網址查詢api
-#     input_username=request.form["input_username"]#採用request.form 指令取表單資訊-帳號
-#     api_url='/api/members?username=input_username=%s'&(input_username)
-#     print(api_url)
-#     return redirect("/api/members?username=%s",(input_username)) #把會員名稱帶入member.html
-
 @app.route("/signout") #登出頁面
 def signout():#再登入畫面按登出鍵後導入此頁
     session.clear() #登出後清空cookie內的sessuon

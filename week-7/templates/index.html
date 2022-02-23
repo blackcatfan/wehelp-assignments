@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>week 6 assignment - log in</title>
+    <link rel="stylesheet" type="text/CSS" href="/forflask.css">
+</head>
+
+<body>
+<div Class="HeroTop">
+    <div Class="HeroText">歡迎光臨,請註冊或登入帳號密碼
+    </div>    
+</div>    
+    
+<div Class="FormFrame">
+    <div Class="form">
+        <form action="/signup", method='POST'>
+            註冊會員<br>
+            姓名<input type="text" name="NewNickName" required/><br>
+            帳號<input type="text" name="NewAccountName" required/><br>
+            密碼<input type="password" name="NewAccountPassword"required/><br>
+        <div Class=ButtonFrame>
+            <button Class="ButtonCenter">註冊</button><br>
+        </div>    
+        </form>
+    </div>
+</div>
+
+<div Class="FormFrame">
+    <div Class="form">
+        <form action="/signin", method='POST'>
+        登入系統<br>
+            帳號<input type="text" name="AccountName" /><br>
+            密碼<input type="password" name="AccountPassword"/><br>
+        <div Class=ButtonFrame>
+            <button Class="ButtonCenter">登入</button>
+        </div>    
+        </form>
+    </div>
+</div>   
+    
+</body>
+</html>

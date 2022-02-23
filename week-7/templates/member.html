@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>week 6 assignment</title>
+</head>
+
+<body>
+<div>
+    <h3>歡迎光臨-這是會員頁</h3><br>
+{{name}},恭喜你成功登入系統<br>
+<a href="http://127.0.0.1:3000/signout">登出系統</a>
+</div>
+
+<div>
+    <h3>查詢會員姓名</h3>
+
+<!-- 以下表單根據會員輸入使用者代號,產生查詢api link 該會員的全部資料 -->
+<form id="form2">
+    <label> 請輸入使用者登入帳號: <input type="text" name="username"></label>
+    <br><br>
+    <button type="submit">查詢</button>
+  </form>
+  <p id="log1"></p>
+  <p id="log2"></p>
+  <span id="log5"></span>  <h3 id="log3"></h3>
+  <span id="log6"></span>  <h3 id="log4"></h3>
+
+
+</div>
+<script>
+var form2 = document.getElementById('form2');
+var log2 = document.getElementById('log2');
+api_url_add=""
+form2.addEventListener('submit', geturl);
+
+function geturl(event) {
+  let api_url = "http://127.0.0.1:3000/api/members?username="+document.getElementsByName("username")[0].value;
+  var username= document.getElementsByName('username')[0].value;
+  async function getapidata(){
+        const response= await fetch(api_url);
+        const apidata=await response.json();
+        k=JSON.stringify(apidata.data.name)
+        console.log(apidata.data.name)
+        console.log(k)
+        console.log(apidata)
+        log3.textContent = `${apidata.data.name}`;
+        log4.textContent = `${apidata.data.username}`;
+        log5.textContent = `${"該登入帳號的會員名稱:"}`;
+        log6.textContent = `${"該登入帳號:"}`;
+    } 
+    getapidata();
+
+  event.preventDefault();//加了這一行不會轉別的網址
+}
+
+</script>
+
+</body>
+</html>

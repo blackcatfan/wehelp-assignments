@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!--RWD網頁必加viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Assignment - Week 2 -Task2
+    </title>
+    <link rel="stylesheet" type="text/CSS" href="hw_wk_fix20220101.css">
+</head>
+
+<body>
+<!--桌機選單-->
+<div Class="frame-PCL1">
+    <div Class="frame-PCL2">    
+        <div class="sitename">
+            My Website
+        </div>
+
+        <div Class="itemtext">
+                <div Class="item">item 1</div>
+                <div Class="item">item 2</div>
+                <div Class="item">item 3</div>
+                <div Class="item">item 4</div>
+        </div>
+    </div>
+</div>
+
+<!--手機選單-->
+<div class="frame-mobileL1">
+    
+    <div class="frame-mobileL2">
+        <div class="sitename">
+            My Website
+        </div>
+
+        <div class="mobilemenu">
+            <div class="iconbox">
+                <div class="icon"><img src="hamburgerICON.png"/></div>
+            </div>
+        </div>
+
+    </div>
+</div>   
+
+<!--Part2 Welcome--> 
+<div Class="hero">
+    <div Class="slogan">Welcome to MyHome</div>
+
+</div>
+
+<div class="space"></div>
+
+<!--Part3 frame1包一排4圖 & 置中-->
+<div class="frame1">
+    <!--Part3 第一排  4格圖-->
+    <div Class="frame2">
+        <div Class="image">
+            <img src="flower.jpg" alt="lily flower" title="Lily Flower">
+            <div class="txtunderimage"><span id="name_0"></span></div>    
+        </div>
+
+        <div Class="image">
+                <img src="flower.jpg" alt="lily flower" title="Lily Flower">
+                <div class="txtunderimage"><span id="name_1"></span></div> 
+            </div>
+
+        <div Class="image">
+                <img src="flower.jpg" alt="lily flower" title="Lily Flower">
+                <div class="txtunderimage"><span id="name_2"></span></div> 
+            </div> 
+        
+        <div Class="image">
+            <img src="flower.jpg" alt="lily flower" title="Lily Flower">
+            <div class="txtunderimage"><span id="name_3"></span></div> 
+        </div> 
+    </div>     
+</div>
+
+<div class="frame1">
+    <!--Part3 第二排  4格圖-->
+    <div Class="frame2">
+
+        <div Class="image">
+            <img src="flower.jpg" alt="lily flower" title="Lily Flower">
+            <div class="txtunderimage"><span id="name_4"></span></div>    
+        </div>
+
+        <div Class="image">
+                <img src="flower.jpg" alt="lily flower" title="Lily Flower">
+                <div class="txtunderimage"><span id="name_5"></span></div> 
+            </div>
+
+        <div Class="image">
+            <img src="flower.jpg" alt="lily flower" title="Lily Flower">
+                <div class="txtunderimage"><span id="name_6"></span></div> 
+            </div> 
+        
+        <div Class="image">
+            <img src="flower.jpg" alt="lily flower" title="Lily Flower">
+            <div class="txtunderimage"><span id="name_7"></span></div> 
+        </div> 
+    </div>    
+</div>
+
+<script>
+    let api_url='https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json';    
+    
+    async function getapidata_stitle(){
+        const response= await fetch(api_url);
+        const apidata=await response.json();
+        for (i=0;i<8;i++){
+            document.getElementById('name_'+i).textContent=apidata.result.results[i].stitle;
+        }
+    } 
+    getapidata_stitle();
+
+    // async function getapidata_image(){
+    //     const response= await fetch(api_url);
+    //     const apidata2=await response.json(); 
+    //     for (j=0;j<8;j++){
+    //         document.getElementById('image_'+j).textContent=apidata2.result.results[j].file;
+    //         document.getElementById('image1_'+j).textContent=apidata2_image_0.split(/.jpg|.JPG/)[0]+".jpg";
+    //     }
+    // } 
+    // getapidata_image();
+
+    async function getapidata_image(){
+        const response= await fetch(api_url);
+        const apidata2=await response.json(); 
+        console.log(apidata2)
+        apidata2_image1=apidata2.result.results[0].file
+        apidata2_image1_1=apidata2_image1.split(/.jpg|.JPG/)[0]+".jpg"
+        console.log(apidata2_image1)
+        console.log(apidata2_image1_1)
+
+        var map = {};
+        for (var j = 0; j < 8; j=j+1) {
+        map["apidata2_image" + j] = apidata2.result.results[j].file.split(/.jpg|.JPG/)[0]+".jpg"
+        }
+        console.log(map)
+        console.log(map.apidata2_image0)
+
+        
+    }
+
+
+
+    getapidata_image();
+    
+    </script>
+
+</body>

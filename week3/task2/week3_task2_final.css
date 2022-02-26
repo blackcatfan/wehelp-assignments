@@ -1,0 +1,141 @@
+/*圖片等比放大*/
+img {
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.frame-PCL1{display:block}
+.frame-PCL2{display:flex}
+.itemtext{ 
+    display:flex;
+    justify-content:flex-end;/*水平對齊*/
+    flex:auto;
+    font-size:20px;
+    width: 50%
+    display:block;
+    }
+.item{
+    flex:none;
+    width:77px;
+    font-size:20px;
+    margin-left: 10px;
+}
+
+.frame-mobileL1{
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+
+.frame-mobileL2{
+    display: flex;/*讓sitename和pcmenu 能夠並排同列*/
+    background-color: rgb(255, 255, 255);
+}
+
+.sitename{flex:none;width:250px; font-size:20px;
+    background-color: rgb(255, 255, 255);
+    margin-left:10px ;
+}
+
+.mobilemenu{
+    display:flex;/*讓容器下面的item能夠並排同列*/
+    justify-content:flex-end;/*靠右對齊*/
+    flex:auto;/*尺寸自適應於內容（flex-basis:auto)*/
+    font-size:20px;
+    width:50%
+    display:block;/*元素寬度預設會撐到最大，使其占滿整個容器
+    ．可以設定長寬/margin/padding，但仍會占滿一整行*/
+    background-color:rgb(255, 255, 255);
+    }   
+}
+.iconbox{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex:auto;
+    background-color:rgb(255, 255, 255);
+}
+
+.icon{
+    flex:none;
+    text-align: center;
+    height: 30px;
+}
+
+    /*螢幕尺寸<600px則套用以下設定*/
+    @media (max-width:600px){
+        .frame-PC{display:none;}
+        .frame-mobileL1{display:block;}
+    
+    }
+    
+
+/*以下為完美置中的範例*/
+.hero{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 300px;
+    font-size:40px;
+    background-color:rgb(176, 219, 230);
+}
+.slogan{
+    font-size:40px;
+    text-align: center;
+    height: 100px;
+    width: 500px;
+}
+.space{height:5px;}
+
+/*以下為圖片縮放&RWD範例*/
+
+.frame1{
+    margin-top: 5px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.frame2{
+    margin-top: 5px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px; 
+}
+
+.image{margin-right: 10px;
+    margin-bottom: 10px;
+    background-color:#b0dbe6; 
+    width: 400px; 
+}
+.txtunderimage{
+    font-size:12px;
+    text-align: center;
+    text-align: button;
+}
+
+/*螢幕尺寸寬度>1250px則套用以下設定*/
+@media (min-width:1201px){
+    .frame-PCL1{display:block;}
+    .frame-mobileL1{display:none;}
+    .frame2 {width: 1200px;}
+}
+
+
+/*螢幕尺寸寬度<1200px則套用以下設定*/
+@media (max-width:1200px){
+    .frame-PCL1{display:block;}
+    .frame-mobileL1{display:none;}
+    .frame2 {flex-wrap: wrap;}
+    .image{width:45%}
+
+}
+
+/*螢幕尺寸<600px則套用以下設定*/
+@media (max-width:600px){
+    .frame-PCL1{display:none;}
+    .frame-mobileL1{display:block;}
+    .frame2{flex-wrap: wrap;}
+    .image{width:90%}
+}
